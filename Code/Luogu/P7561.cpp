@@ -22,9 +22,8 @@ tp _Read() {
   for (; __c < 48 || __c > 57; __c = getchar()) {
     __neg = __c == 45;
   }
-  while (__c > 47 && __c < 58) {
+  for (; __c > 47 && __c < 58; __c = getchar()) {
     __val = __val * 10 + (__c & 15);
-    __c = getchar();
   }
   return __neg ? ~__val + 1 : __val;
 }
