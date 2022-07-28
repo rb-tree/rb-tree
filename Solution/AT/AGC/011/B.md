@@ -21,4 +21,4 @@ $2 \leq n \leq 10^5, 1 \leq A_i \leq 10^9$
 
 因为要排序，复杂度是 $\mathcal O\left(n \log n\right)$。
 
-## [代码]()
+## [代码](https://raw.verge.tk/rb-tree/rb-tree/main/Code/AT/AGC/011/B.cpp)
