@@ -1,4 +1,4 @@
-// By rbtree - Koi Carp
+// By rbtree (https://rbtree.archi)
 // Please submit with C++14!
 #include <algorithm>
 #include <array>
