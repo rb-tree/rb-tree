@@ -8,6 +8,7 @@
 #include <list>
 #include <map>
 #include <queue>
+#include <random>
 #include <set>
 #include <tuple>
 #include <unordered_map>
@@ -43,8 +44,9 @@ constexpr tp _BUF_SIZE_ = 2179217;
 
 namespace __SOL__ {
 void main([[maybe_unused]] size_t __CASE__) {  // :/
-  constexpr tp _MOD_ = 2179217;
-  function<tp()> rmod = []() -> tp {
+  srand(time(0));
+  tp _MOD_ = rand() + 217, a, b;
+  function<tp()> rmod = [&_MOD_]() -> tp {
     char c = rr;
     tp val;
     while (c < '0' || c > '9') {
@@ -56,7 +58,8 @@ void main([[maybe_unused]] size_t __CASE__) {  // :/
     }
     return val;
   };
-  tp a = rmod(), b = rmod();
+  a = rmod();
+  b = rmod();
   puts((a * b % _MOD_) == rmod() ? "YES" : "NO");
 }  // :)
 }  // namespace __SOL__
