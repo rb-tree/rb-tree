@@ -105,7 +105,7 @@ for (unsigned long long i = 0; i < N; ++i) {
 
 $$\prod\limits_{i = 0}^{k - 1} \left(1 - \frac ip\right) < \prod\limits_{i = 0}^{k - 1} e^{-\frac ip} < e^{-\ln2} = \frac12$$
 
-因此我们重复这个过程，可以在 $\mathcal O\left(p\right)$ 的时间内找到等长冲突。
+因此我们重复这个过程，可以在 $\mathcal O\left(\sqrt p\right)$ 的时间内找到等长冲突。
 
 生日攻击不依赖于哈希函数（异或哈希也可以）。但它不能卡回文串。
 
