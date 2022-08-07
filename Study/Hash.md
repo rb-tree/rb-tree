@@ -82,7 +82,7 @@ unsigned long long mul(unsigned long long a, unsigned long long b) {
 
 ### 单哈希
 #### Thue - Morse 序列攻击：`unsigned long long` 自然溢出
-考虑 $P = 2^{64}$，a 任意的情况。我们可以使用 Thue - Morse 序列来卡。它的生成方式如下：
+考虑 $P = 2^{64}$， $a$ 任意的情况。我们可以使用 Thue - Morse 序列来卡。它的生成方式如下：
 
 ```cpp
 constexpr unsigned long long _Pow = 10, N = 1ull << _Pow;
