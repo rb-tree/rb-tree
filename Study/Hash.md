@@ -125,7 +125,7 @@ $$
 \end{align*}
 $$
 
-不妨设 $A_i = S_i - T_i$，显然 $-\lvert\Sigma\rvert \leq A_i \leq \lvert\Sigma\rvert$。树攻击会尝试寻找一个 $A_i \in \{-1, 0, 1\}$ 的序列使得
+不妨设 $A_i = S_i - T_i$，显然 $-\lvert\Sigma\rvert \leq A_i \leq \lvert\Sigma\rvert$。树攻击会尝试寻找一个 $A_i \in \begin{cases}\begin{rcases}-1, 0, 1\end{rcases}\end{cases}$ 的序列使得
 
 $$\sum\limits_{i = 1}^n A_i \left(a^{n - i} \bmod p\right) = 0$$
 
@@ -176,7 +176,7 @@ $$\sum\limits_{i = 1}^{\frac n2} A_i \left[\left(a^{n - i} - a^{i - 1}\right) \b
 ## 制造多重哈希冲突
 
 ### 逐个击破
-以双哈希为例，考虑 $\left(a_1, p_1\right), \left(a_2, p_2\right)$ 的双哈希。首先我们使用生日攻击或者树攻击找到 $\left(a_1, p_1\right)$ 的一个等长冲突 $S, T$ 。然后我们以 $\{S, T\}$ 作为字符集对 $\left(a_2^{\lvert S \rvert}, p_2\right)$ 求出等长冲突（以 $\{S, T\}$ 作为字符集的意思是，我们用 $S$ 和 $T$ 拼接出一个更大的串）。这样就可以把两个哈希都冲突掉。
+以双哈希为例，考虑 $\left(a_1, p_1\right), \left(a_2, p_2\right)$ 的双哈希。首先我们使用生日攻击或者树攻击找到 $\left(a_1, p_1\right)$ 的一个等长冲突 $S, T$ 。然后我们以 $\begin{cases}\begin{rcases}S, T\end{rcases}\end{cases}$ 作为字符集对 $\left(a_2^{\lvert S \rvert}, p_2\right)$ 求出等长冲突（以 $\begin{cases}\begin{rcases}S, T\end{rcases}\end{cases}$ 作为字符集的意思是，我们用 $S$ 和 $T$ 拼接出一个更大的串）。这样就可以把两个哈希都冲突掉。
 
 使用这个方法，时间复杂度是每次攻击的复杂度之和。但生成的串长会随着哈希的重数而指数级增长。
 
