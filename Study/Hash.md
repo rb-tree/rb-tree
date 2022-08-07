@@ -2,7 +2,7 @@
 
 ## 设计难卡的滚动哈希
 ### 滚动哈希
-我们使用二元组 $\left(p, a\right)$ 来描述滚动哈希。其中 $p$ 是**模数（modulo）**，$a$ 是**基数（base）**。
+我们使用二元组 $\left(p, a\right)$ 来描述滚动哈希。其中 $p$ 是**模数（modulo）**， $a$ 是**基数（base）**。
 
 对于长度为 $n$ 的字符串 $S$，它的滚动哈希函数为
 
@@ -133,10 +133,10 @@ $$\sum\limits_{i = 1}^n A_i \left(a^{n - i} \bmod p\right) = 0$$
 
 如果我们合并两个集合 $C_1, C_2$ 到 $C_3$，则我们可以：
 1. 直接合并，则 $S\left(C_3\right) = S\left(C_1\right) + S\left(C_2\right)$
-2. 把 $\forall i \in C_1$，$A_i$ 都乘 $-1$ 再合并，则 $S\left(C_3\right) = S\left(C_2\right) - S\left(C_1\right)$
-3. 类似 2，$S\left(C_3\right) = S\left(C_1\right) - S\left(C_2\right)$
-4. 把 $\forall i \in C_1$，$A_i$ 都变成 $0$，则 $S\left(C_3\right) = S\left(C_2\right)$
-5. 类似 4，$S\left(C_3\right) = S\left(C_1\right)$
+2. 把 $\forall i \in C_1$， $A_i$ 都乘 $-1$ 再合并，则 $S\left(C_3\right) = S\left(C_2\right) - S\left(C_1\right)$
+3. 类似 2，则 $S\left(C_3\right) = S\left(C_1\right) - S\left(C_2\right)$
+4. 把 $\forall i \in C_1$， $A_i$ 都变成 $0$，则 $S\left(C_3\right) = S\left(C_2\right)$
+5. 类似 4，则 $S\left(C_3\right) = S\left(C_1\right)$
 
 一开始我们有 $n$ 个集合，设每个集合的 $A_i$ 都是 $1$。不妨设 $n = 2^k$。则我们每个阶段，都把集合按 $S\left(C\right)$ 排序，然后使用 2 或者 3 方法来合并相邻两个集合（要保证合并完后 $S\left(C\right)$ 非负）。一轮完成后，集合数量减半。如果出现了一个 $S\left(C\right) = 0$ 的集合，那么我们把其他集合的 $A_i$ 都置为 $0$ 即可。这样会最多做 $k$ 轮。如果没有找到，那么就对更大的 $k$ 继续这个过程。
 
@@ -145,7 +145,7 @@ $$\sum\limits_{i = 1}^n A_i \left(a^{n - i} \bmod p\right) = 0$$
 注意，树攻击是依赖于哈希函数的，即你的哈希函数必须是多项式函数。
 
 ##### 卡回文串
-树攻击可以卡回文串。以偶回文串为例，具体地说，我们要构造一个**长度为偶数**的串 $S$，使得 $S \neq S^R, H\left(S\right) = H\left(S^R\right)$（$S^R$ 表示反串）。
+树攻击可以卡回文串。以偶回文串为例，具体地说，我们要构造一个**长度为偶数**的串 $S$，使得 $S \neq S^R, H\left(S\right) = H\left(S^R\right)$（ $S^R$ 表示反串）。
 
 那么这等价于
 
