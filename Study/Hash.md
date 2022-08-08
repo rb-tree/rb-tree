@@ -19,9 +19,9 @@ $$
 \begin{align*}
 & H\left(S\right) = H\left(T\right)
 \newline
-\iff & \sum\limits_{i = 1}^n S_i \cdot a^{n - 1} = \sum\limits_{i = 1}^n T_i \cdot a^{n - 1} \mod p
+\iff & \sum\limits_{i = 1}^n S_i \cdot a^{n - i} = \sum\limits_{i = 1}^n T_i \cdot a^{n - i} \mod p
 \newline
-\iff & P\left(a\right) = \sum\limits_{i = 1}^n \left(S_i - T_i\right) \cdot a^{n - 1} = 0 \mod p
+\iff & P\left(a\right) = \sum\limits_{i = 1}^n \left(S_i - T_i\right) \cdot a^{n - i} = 0 \mod p
 \end{align*}
 $$
 
