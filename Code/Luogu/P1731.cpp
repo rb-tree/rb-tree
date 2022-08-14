@@ -80,7 +80,7 @@ void main([[maybe_unused]] size_t __CASE__) {  // :/
       dfs(m - 1, n - i * i * h, i * i + (i * h << 1), i, h);
     }
   }
-  cout << (tar % 0x7fffffffffffffff);
+  cout << (tar % (-1ull >> 2));
 }  // :)
 }  // namespace __SOL__
 
